@@ -1,5 +1,4 @@
 const dependentModules = [
-    'commander',
     'iconv-lite',
     'sync-request',
     'cheerio',

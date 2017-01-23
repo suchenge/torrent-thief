@@ -41,34 +41,33 @@ function pilferRoom(roomLink, roomName, roomBox, treasure, endDate, next = '') {
                     cupboard = Builder.cupboard(cupboardLink);
                     if (cupboard) {
                         print(`cupboard date:${cupboard.date}`.yellow);
-                        if (Date.parse(endDate) < Date.parse(cupboard.date)) {
-                            if (cupboard.files != null && cupboard.files.length > 0) {
-                                dateBox = roomBox.getChild(dateHelper.formate(cupboard.date));
-                                cupboardBox = dateBox.getChild(cupboard.title);
-                                cupboardIndex = {
-                                    date: cupboard.date,
-                                    link: cupboardLink,
-                                    title: cupboard.title,
-                                    box: cupboardBox.name
-                                };
-                                if (!dateBox.menu.contain(cupboardIndex)) {
-                                    for (let file of cupboard.files) {
-                                        if (!blackDomain.contain(file.link)) {
-                                            if (!cupboardBox.saveFile(file.name, file.link)) {
-                                                blackDomain.append(file.link);
-                                            }
-                                        }
-                                    }
-                                    dateBox.menu.append(cupboardIndex);
-                                    Object.assign(cupboardIndex, { files: cupboard.files });
-                                    cupboardBox.menu.append(cupboardIndex);
-                                    print(`successful.`);
-                                } else print(`contained`.red);
-                            } else print(`cupboard[${cupboardLink}] files is null`.red);
-                        } else {
+                        if (endDate && (Date.parse(endDate) < Date.parse(cupboard.date))) {
                             print(`${endDate} < ${cupboard.date}`.yellow);
                             break;
                         }
+                        if (cupboard.files != null && cupboard.files.length > 0) {
+                            dateBox = roomBox.getChild(dateHelper.formate(cupboard.date));
+                            cupboardBox = dateBox.getChild(cupboard.title);
+                            cupboardIndex = {
+                                date: cupboard.date,
+                                link: cupboardLink,
+                                title: cupboard.title,
+                                box: cupboardBox.name
+                            };
+                            if (!dateBox.menu.contain(cupboardIndex)) {
+                                for (let file of cupboard.files) {
+                                    if (!blackDomain.contain(file.link)) {
+                                        if (!cupboardBox.saveFile(file.name, file.link)) {
+                                            blackDomain.append(file.link);
+                                        }
+                                    }
+                                }
+                                dateBox.menu.append(cupboardIndex);
+                                Object.assign(cupboardIndex, { files: cupboard.files });
+                                cupboardBox.menu.append(cupboardIndex);
+                                print(`successful.`);
+                            } else print(`contained`.red);
+                        } else print(`cupboard[${cupboardLink}] files is null`.red);
                     } else print(`cupboard[${cupboardLink}] is null`.red);
                 }
                 cupboardIndex = null;

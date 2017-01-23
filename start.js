@@ -1,14 +1,13 @@
 const commander = require('commander');
 const Thielf = require('./modules/thief');
+const process = require('process');
 
-commander.command('pilfer <linkNumber> <endDate> <linkCount>')
-    .action(function(linkNumber, endDate, linkCount) {
-        let number = linkNumber ? linkNumber : 230;
-        let toDate = endDate ? endDate : null;
-        let count = linkCount ? linkCount : 1;
-
-        new Thielf().pilfer(number, toDate, count);
-        console.log('done');
-    });
-
-commander.parse(process.argv);
+const processArgv = process.argv.filter((arg, index) => (index > 1));
+let args = {
+    number: processArgv.length > 0 && processArgv[0] ? processArgv[0] : 230,
+    toDate: processArgv.length > 0 && processArgv[1] ? processArgv[1] : null,
+    count: processArgv.length > 0 && processArgv[2] ? processArgv[2] : 1
+}
+console.log(args);
+new Thielf().pilfer(args.number, args.toDate, args.count);
+console.log('done');
