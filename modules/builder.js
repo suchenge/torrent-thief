@@ -106,7 +106,7 @@ function getArchives(link, identifier) {
     try {
         if (identifier) {
             let archivesLink = setting.archivesRoom + identifier;
-            let response = request.get(archivesLink, {}, 'gb2312');
+            let response = request.get(archivesLink, {}, 'utf8');
             if (response) {
                 let $ = cheerio.load(response);
                 let detailLink = $('a .movie-box').eq(0).attr('href');

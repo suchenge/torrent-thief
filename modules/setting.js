@@ -16,10 +16,10 @@ module.exports = {
         retryCount: 3
     },
     menu: {
-        name: 'menu.json',
+        name: 'index.json',
         splitSymbol: `,\r\n`
     },
-    archivesRoom: 'https://avmo.pw/ja/search/',
+    archivesRoom: 'https://www.av28.com/en/search/',
     rooms: [{
             number: 230,
             title: '亚洲有码原创区',
