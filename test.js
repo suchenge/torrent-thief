@@ -1,6 +1,6 @@
 const Thielf = require('./modules/thief');
 
-let roomLinkNumber = 25;
+let roomLinkNumber = 230;
 
-new Thielf().pilfer(roomLinkNumber, '2016-10-10', 11);
+new Thielf().pilfer(roomLinkNumber, '2017-01-15', null);
 console.log('done');

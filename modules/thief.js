@@ -41,8 +41,8 @@ function pilferRoom(roomLink, roomName, roomBox, treasure, endDate, next = '') {
                     cupboard = Builder.cupboard(cupboardLink);
                     if (cupboard) {
                         print(`cupboard date:${cupboard.date}`.yellow);
-                        if (endDate && (Date.parse(endDate) < Date.parse(cupboard.date))) {
-                            print(`${endDate} < ${cupboard.date}`.yellow);
+                        if (endDate && (Date.parse(endDate) > Date.parse(cupboard.date))) {
+                            print(`${endDate} > ${cupboard.date}`.yellow);
                             break;
                         }
                         if (cupboard.files != null && cupboard.files.length > 0) {

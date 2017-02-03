@@ -6,6 +6,7 @@ function getDomain(url) {
     let domain = parseDomain(url);
     return [domain.domain, domain.tld].join('.');
 }
+
 class BlackDomain {
     constructor() {
         this.filePath = setting.path.blackDomain;

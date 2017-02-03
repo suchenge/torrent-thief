@@ -92,14 +92,43 @@ function buildRoom(link) {
             title: title,
             cupboardLinks: links,
             nextLink: nextLink
-        }
+        };
     } catch (ex) {
         log.write('build room error', link, response, ex);
     } finally {
-        response = undefined;
-        $ = undefined;
+        response = null;
+        $ = null;
     }
     return result;
+}
+
+function getArchives(link, identifier) {
+    try {
+        if (identifier) {
+            let archivesLink = setting.archivesRoom + identifier;
+            let response = request.get(archivesLink, {}, 'gb2312');
+            if (response) {
+                let $ = cheerio.load(response);
+                let detailLink = $('a .movie-box').eq(0).attr('href');
+                if (detailLink) {
+                    response = request.get(detailLink, {}, 'gb2312');
+                    $ = cheerio.load(response);
+                    let files = $('a .sample-box').attr('href');
+                    let performer = $('a .avatar-box').first().find('span').text();
+                    let infoElement = $('div .col-md-3').find('p');
+                    return {
+                        date: infoElement.eq(1),
+                        publisher: infoElement.eq(4).text(),
+                        category: infoElement.eq(8).find('a').text(),
+                        stagePhotos: $('a .sample-box').attr('href')
+                    };
+                }
+            }
+        }
+    } catch (ex) {
+        log.write('build archives error', link, null, ex);
+    }
+    return null;
 }
 
 function buildCupboard(link) {
@@ -110,6 +139,9 @@ function buildCupboard(link) {
         let response = request.get(link, {}, 'gb2312');
         let $ = cheerio.load(response);
         let title = $('div .postcontent').find('h2').text();
+        let identifier;
+        let identifierMatch = title.match(/[a-zA-Z]{1,}\-\d+/gi);
+        if (identifierMatch) identifier = identifierMatch[0];
         let postInfo = $('div .postcontent').find('.postinfo').eq(0).text().replace(/\s{2,}/g, '');
         let date = /\d+-\d+-\d+ \d+:\d+/gi.exec(postInfo)[0];
         date = `${new Date(date).toLocaleDateString()} ${new Date(date).toLocaleTimeString()}`;
@@ -132,7 +164,9 @@ function buildCupboard(link) {
                 fileName = null;
             }
         });
+        //let archives = getArchives(link, identifier);
         result = {
+            identifier: identifier,
             address: address,
             title: title,
             date: date,
@@ -141,8 +175,8 @@ function buildCupboard(link) {
     } catch (ex) {
         log.write('build cupboard error', link, response, ex);
     } finally {
-        response = undefined;
-        $ = undefined;
+        response = null;
+        $ = null;
     }
     return result;
 }

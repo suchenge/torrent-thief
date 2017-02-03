@@ -19,6 +19,7 @@ module.exports = {
         name: 'menu.json',
         splitSymbol: `,\r\n`
     },
+    archivesRoom: 'https://avmo.pw/ja/search/',
     rooms: [{
             number: 230,
             title: '亚洲有码原创区',
