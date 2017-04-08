@@ -85,6 +85,7 @@ class Thief {
     constructor() {
         this.treasure = new Box(setting.path.treasure);
     }
+
     pilfer(roomNumber, endDate = null, roomCount = 0) {
         let roomInfo = setting.rooms.filter(room => (room.number == roomNumber))[0];
         let roomBox = this.treasure.getChild(roomInfo.title);
@@ -97,11 +98,11 @@ class Thief {
             roomLinks = null;
         } else if (roomCount > 0) roomLink = Builder.buildRoomLink(roomLink, roomCount);
 
-
         if (!endDate) {
             let roomLastDateBox = roomBox.list[0];
             endDate = roomLastDateBox.name;
         }
+
         pilferRoom(roomLink, roomInfo.title, roomBox, this.treasure, endDate);
 
         roomInfo = null;
