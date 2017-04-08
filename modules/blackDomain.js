@@ -4,7 +4,8 @@ const setting = require('./setting');
 
 function getDomain(url) {
     let domain = parseDomain(url);
-    return [domain.domain, domain.tld].join('.');
+    if (domain) return [domain.domain, domain.tld].join('.');
+    return null;
 }
 
 class BlackDomain {

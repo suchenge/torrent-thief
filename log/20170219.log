@@ -1,0 +1,173 @@
+date:2017-02-19 01:35:10
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9850382-1-14.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:202:18)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 01:38:49
+message:request error
+link:http://9c9vimg.000129.com:7861/201611/8680976065994249.jpg
+Error
+C:\Users\vs14\node_modules\http-basic\index.js:100
+      if (options.followRedirects && isRedirect(res.statusCode)) {
+                                                   ^
+
+TypeError: Cannot read property 'statusCode' of undefined
+    at C:\Users\vs14\node_modules\http-basic\index.js:100:52
+    at C:\Users\vs14\node_modules\http-basic\index.js:224:9
+    at Timeout.onTimeout [as _onTimeout] (C:\Users\vs14\node_modules\http-basic\index.js:263:5)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+
+Error: C:\Users\vs14\node_modules\http-basic\index.js:100
+      if (options.followRedirects && isRedirect(res.statusCode)) {
+                                                   ^
+
+TypeError: Cannot read property 'statusCode' of undefined
+    at C:\Users\vs14\node_modules\http-basic\index.js:100:52
+    at C:\Users\vs14\node_modules\http-basic\index.js:224:9
+    at Timeout.onTimeout [as _onTimeout] (C:\Users\vs14\node_modules\http-basic\index.js:263:5)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+
+    at doRequest (C:\Users\vs14\node_modules\sync-request\index.js:27:11)
+    at request (D:\Exercise\torrent-thief\modules\utility\syncRequest.js:15:19)
+    at Object.exports.getFile (D:\Exercise\torrent-thief\modules\utility\syncRequest.js:49:18)
+    at Box.saveFile (D:\Exercise\torrent-thief\modules\box.js:56:28)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:60:58)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 06:23:35
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9840096-1-35.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:202:18)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 06:23:38
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9840096-1-35.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:205:22)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 06:23:40
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9840096-1-35.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:205:22)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 06:23:42
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9840096-1-35.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:205:22)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 06:43:45
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9839117-1-37.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:202:18)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
+date:2017-02-19 22:20:46
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9843675-1-28.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:202:18)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at Thief.pilfer (D:\Exercise\torrent-thief\modules\thief.js:105:9)
+    at Object.<anonymous> (D:\Exercise\torrent-thief\test.js:5:14)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+-----------------------------------------------
+date:2017-02-19 23:30:05
+message:build cupboard error
+link:http://67.220.93.4/forum/thread-9838260-1-39.html
+TypeError
+Cannot read property '0' of null
+TypeError: Cannot read property '0' of null
+    at buildCupboard (D:\Exercise\torrent-thief\modules\builder.js:146:58)
+    at Object.module.exports.cupboard (D:\Exercise\torrent-thief\modules\builder.js:202:18)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:41:40)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+    at pilferRoom (D:\Exercise\torrent-thief\modules\thief.js:37:33)
+-----------------------------------------------
