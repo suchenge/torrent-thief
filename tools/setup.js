@@ -4,7 +4,8 @@ const dependentModules = [
     'cheerio',
     'parse-domain',
     'colors',
-    'urlencode2'
+    'urlencode2',
+    'commander'
 ];
 
 let moduleObj, needSetup;

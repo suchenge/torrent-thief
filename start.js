@@ -1,4 +1,3 @@
-const commander = require('commander');
 const Thielf = require('./modules/thief');
 const process = require('process');
 
