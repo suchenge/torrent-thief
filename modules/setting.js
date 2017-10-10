@@ -34,11 +34,6 @@ module.exports = {
             number: 143,
             title: '亚洲无码原创区',
             link: 'http://67.220.93.4/forum/forum-143-1.html'
-        },
-        {
-            number: 25,
-            title: '亚洲无码转帖区',
-            link: 'http://67.220.93.4/forum/forum-25-1.html'
         }
     ]
 };

@@ -33,6 +33,7 @@ function replaceBadFileName(name) {
     str = str.replace(/\//g, '');
     str = str.replace(/\|/g, '');
     str = str.replace(/\./g, '');
+    str = str.replace(/\？/g, '');
     return replaceFolderName(str);
 }
 
