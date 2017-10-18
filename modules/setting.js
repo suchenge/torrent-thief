@@ -4,6 +4,7 @@ module.exports = {
     path: {
         treasure: `${path}\\treasures`,
         blackDomain: `${path}\\config\\blackDomain.config`,
+        keyword:`${path}\\config\\keyword.config`,
         log: `${path}\\log`
     },
     whiteDomain: ['67.220.93.4'],
