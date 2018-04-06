@@ -7,11 +7,11 @@ module.exports = {
         keyword:`${path}\\config\\keyword.config`,
         log: `${path}\\log`
     },
-    whiteDomain: ['67.220.93.4'],
+    whiteDomain: ['67.220.91.30'],
     request: {
         retryCount: 3,
         retryDelay: 1000,
-        timeout: 20000
+        timeout: 200
     },
     build: {
         retryCount: 3
