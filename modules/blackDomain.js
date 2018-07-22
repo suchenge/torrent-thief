@@ -27,10 +27,10 @@ class BlackDomain {
         });
     }
     append(url) {
-        if (url.includes('67.220.93.4')) return;
-        if (!this.contain(url)) {
-            fs.appendFileSync(this.filePath, '\r\n' + getDomain(url));
-        }
+        //if (url.includes('67.220.93.4')) return;
+        //if (!this.contain(url)) {
+        //    fs.appendFileSync(this.filePath, '\r\n' + getDomain(url));
+        //}
     }
 }
 
