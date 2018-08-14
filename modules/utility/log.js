@@ -18,5 +18,6 @@ let write = function(message, link, html = null, ex = null) {
     if (html != null) content += `${html}\r\n`;
     content += '-----------------------------------------------\r\n';
     fs.appendFileSync(`${setting.path.log}\\${fileName}.log`, content);
-}
+};
+
 module.exports.write = write;

@@ -210,3 +210,5 @@ module.exports.cupboard = function(link) {
     }
     return result;
 }
+
+module.exports.replaceBadFileName = replaceBadFileName;
