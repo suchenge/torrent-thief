@@ -74,14 +74,19 @@ class Disposal{
 }
 
 function getMoveInfo(fileName){
-    let result = getMoveInfo2(fileName);
-    if (result && result.title && result.img) return result;
-    return getMoveInfo1(fileName);
+    try{
+        let result = getMoveInfo1(fileName);
+        if (result && result.title && result.img) return result;
+    }catch(ex){
+        return getMoveInfo2(fileName);
+    } 
 }
 
 function getMoveInfo1(fileName){
     try{
-        let response = request.get("https://www.javhoo.co/ja/av/"+ fileName);
+        let url = "https://www.javhoo.ca/ja/av/"+ fileName;
+        console.log(url);
+        let response = request.get(url);
         let $ = cheerio.load(response);
         let title = $("h1").text();
         let imgUrl = $("img.size-full").attr("src");
@@ -97,6 +102,7 @@ function getMoveInfo1(fileName){
 function getMoveInfo2(fileName){
     try{
         let url = "https://japan.silviaol.com/code/"+ fileName;
+        console.log(url);
         let response = request.get(url);
         let $ = cheerio.load(response);
         let title = $("div.head_coverbanner").find("h2").eq(1).find("strong").text();

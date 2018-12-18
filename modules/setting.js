@@ -27,11 +27,6 @@ module.exports = {
             link: 'http://67.220.91.30/forum/forum-230-1.html'
         },
         {
-            number: 58,
-            title: '亚洲有码转帖区',
-            link: 'http://67.220.91.30/forum/forum-58-1.html'
-        },
-        {
             number: 143,
             title: '亚洲无码原创区',
             link: 'http://67.220.91.30/forum/forum-143-1.html'
