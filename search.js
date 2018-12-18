@@ -6,5 +6,5 @@ let path = "";
 
 const processArgv = process.argv.filter((arg, index) => (index > 1));
 if (processArgv[0]) path = processArgv[0];
-else path = "N:\\写真\\0";
-dict.appends(path, 0);
+else path = "E:\\temp.0\\Document";
+dict.appends(path, "Temp.2018", 0);
