@@ -30,7 +30,7 @@ class Dictionary{
                 let indexContent = fs.readFileSync(indexPath);
                 index = JSON.parse(indexContent);
                 index.paths = Array.from(index.paths);
-                if (index.paths.evey(path => path != filePath)){
+                if (index.paths.every(path => path != filePath)){
                     index.paths.push(filePath);
                 }
             }else{
