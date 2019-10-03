@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/search.js",
+            "program": "${workspaceRoot}/tidy.js",
             "cwd": "${workspaceRoot}"
         },
         {

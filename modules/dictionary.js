@@ -2,7 +2,7 @@ const fs = require('fs');
 
 class Dictionary{
     constructor(doneCallback){
-        this.path = "D:\\dictionary\\";
+        this.path = "E:\\dictionary\\";
         this.indexsPath = this.path + "indexs\\";
         this.replicateIndexPath = this.path + "replicate.json";
         this.doneCallback = doneCallback;

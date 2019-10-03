@@ -54,7 +54,7 @@ function pilferRoom(roomLink, roomName, roomBox, treasure, endDate, next = '') {
                                 title: cupboard.title,
                                 box: cupboardBox.name
                             };
-                            if (!dateBox.menu.contain(cupboardIndex)) {
+                            //if (!dateBox.menu.contain(cupboardIndex)) {
                                 for (let file of cupboard.files) {
                                     if (!blackDomain.contain(file.link)) {
                                         if (!cupboardBox.saveFile(file.name, file.link)) {
@@ -66,7 +66,7 @@ function pilferRoom(roomLink, roomName, roomBox, treasure, endDate, next = '') {
                                 Object.assign(cupboardIndex, { files: cupboard.files });
                                 cupboardBox.menu.append(cupboardIndex);
                                 print(`successful.`);
-                            } else print(`contained`.red);
+                            //} else print(`contained`.red);
                         } else print(`cupboard[${cupboardLink}] files is null`.red);
                     } else print(`cupboard[${cupboardLink}] is null`.red);
                 }

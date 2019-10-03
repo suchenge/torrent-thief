@@ -84,7 +84,7 @@ function getMoveInfo(fileName){
 
 function getMoveInfo1(fileName){
     try{
-        let url = "https://www.javhoo.ca/ja/av/"+ fileName;
+        let url = "https://www.javhoo.in/ja/av/"+ fileName;
         console.log(url);
         let response = request.get(url);
         let $ = cheerio.load(response);
