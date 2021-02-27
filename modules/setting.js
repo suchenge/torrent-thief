@@ -11,7 +11,7 @@ module.exports = {
     request: {
         retryCount: 3,
         retryDelay: 1000,
-        timeout: 2000
+        timeout: 5000
     },
     build: {
         retryCount: 3

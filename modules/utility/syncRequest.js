@@ -16,7 +16,8 @@ function request(url) {
             timeout: setting.request.timeout,
             retry: setting.request.retryCount > 0,
             retryDelay: setting.request.retryDelay,
-            maxRetries: setting.request.retryCount
+            maxRetries: setting.request.retryCount,
+            strictSSL:false
         });
         if (res.statusCode == 200) {
             let body = res.body;
