@@ -50,8 +50,18 @@ let formate = function(date, fmt = 'yyyy-MM-dd') {
     return fmt;
 }
 
+let sleep = function(numberMillis){
+    let now = new Date();
+    let exitTime = now.getTime() + numberMillis;
+    while (true) {
+        now = new Date();
+        if (now.getTime() > exitTime) return;
+    }
+}
+
 module.exports.dateAdd = dateAdd;
 module.exports.getDate = getDate;
 module.exports.formate = formate;
 module.exports.getCurrentDate = getCurrentDate;
 module.exports.getCurrentDateTime = getCurrentDateTime;
+module.exports.sleep = sleep;
