@@ -274,13 +274,6 @@ async function getMovieInfo3(fileName){
 
 async function getMovieInfo4(fileName){
     console.log("get move info 4");
-
-    /*let searchInput = await driver.findElement(browserDriver.byXPath("//input[@id='video-search']"));
-    let searchButton = await driver.findElement(browserDriver.byXPath("//button[@id='search-submit']"));
-    await searchInput.clear();
-    await searchInput.sendKeys(fileName);
-    await searchButton.click();*/
-
     let url = "https://javdb.com/search?q=" + fileName + "&f=all";
     console.log(url);
 
