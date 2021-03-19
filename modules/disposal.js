@@ -26,9 +26,9 @@ class Disposal{
     async run(){
         filePaths = fs.readdirSync(directoryPath);
         let getMovieInfoFunctions = [
-                                        //getMovieInfoFunction1,
-                                        //getMovieInfoFunction2,
-                                        //getMovieInfoFunction3,
+                                        getMovieInfoFunction1,
+                                        getMovieInfoFunction2,
+                                        getMovieInfoFunction3,
                                         getMovieInfoFunction4
                                     ];
 
@@ -238,7 +238,7 @@ async function getMovieInfo2(fileName) {
     imgUrl = await driver.findElement(browserDriver.byXPath("//a[@id='EnlargeImage']")).getAttribute("href");
     title = await driver.findElement(browserDriver.byXPath("//h1[@class='tag']")).getText();
 
-    let result = {title: fileName + "" + build.replaceBadFileName(title), img: imgUrl};
+    let result = {title: fileName.toUpperCase() + "" + build.replaceBadFileName(title), img: imgUrl};
     console.log(result);
 
     return result;
@@ -266,7 +266,7 @@ async function getMovieInfo3(fileName){
                      .replace(fileName.toLowerCase(),"")
                      .replace(fileName.toUpperCase(),"");
 
-        let result = {title: fileName + "" + build.replaceBadFileName(title).toUpperCase(), img: imgUrl};
+        let result = {title: fileName.toUpperCase() + "" + build.replaceBadFileName(title).toUpperCase(), img: imgUrl};
 
         return result;
     }
@@ -304,7 +304,7 @@ async function getMovieInfo4(fileName){
                              .replace(fileName.toLowerCase(),"")
                              .replace(fileName.toUpperCase(),"");
 
-                let result = {title: fileName + "" + build.replaceBadFileName(title).toUpperCase(), img: imgUrl};
+                let result = {title: fileName.toUpperCase() + "" + build.replaceBadFileName(title).toUpperCase(), img: imgUrl};
 
                 return result;
             }
