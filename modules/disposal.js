@@ -26,9 +26,9 @@ class Disposal{
     async run(){
         filePaths = fs.readdirSync(directoryPath);
         let getMovieInfoFunctions = [
-                                        getMovieInfoFunction1,
-                                        getMovieInfoFunction2,
-                                        getMovieInfoFunction3,
+                                        //getMovieInfoFunction1,
+                                        //getMovieInfoFunction2,
+                                        //getMovieInfoFunction3,
                                         getMovieInfoFunction4
                                     ];
 
@@ -65,7 +65,7 @@ var getMovieInfoFunction2 = {
             driver = browserDriver.getDriver();
 
             await driver.get("https://www.mgstage.com/");
-            let pageTitle = driver.getTitle();
+            let pageTitle = await driver.getTitle();
 
             if (pageTitle === "MGS動画(成人認証) - アダルト動画サイト MGS動画") {
                 await driver.findElement(browserDriver.byXPath("//a[@id='AC']")).click();
@@ -87,7 +87,7 @@ var getMovieInfoFunction3 = {
             driver = browserDriver.getDriver();
 
             await driver.get("http://maddawgjav.net/");
-            let pageTitle = driver.getTitle();
+            let pageTitle = await driver.getTitle();
             if (pageTitle === "just a moment") dateHelper.sleep(10000);
         }
     },
@@ -132,7 +132,7 @@ async function disposalPath(files, getMoveInfoFunction){
     for(let index = 0; index < count; index++){
 
         let file = files[index];
-        if(file){
+        if(file && !["$RECYCLE.BIN","System Volume Information"].includes(file)){
             let currentPath = directoryPath + "\\" + file;
             let isFile = fs.statSync(currentPath).isFile();
 
@@ -285,7 +285,11 @@ async function getMovieInfo4(fileName){
     for (let i = 0; i < listTitleDiv.length; i ++){
         let listTitle = await listTitleDiv[i].getText();
 
-        if(listTitle === fileName){
+        if(
+            listTitle === fileName
+            || listTitle.indexOf(fileName) > -1
+            || fileName.indexOf(listTitle) > -1
+        ){
             let link = listLink[i];
             await link.click();
 
